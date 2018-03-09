@@ -20,16 +20,17 @@ time, mark, audio, video {
 }
 
 body{
-
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
 }
 
 #container{
-
+  flex: 1;
 }
 
 footer{
   background-color: #000;
-  position: absolute;
   right: 0;
   bottom: 0;
   left: 0;
@@ -139,9 +140,4 @@ hr{
 
 #footer-linkedin img{
   width: 100px;
-}
-
-#copyright{
-  color: #fff;
-  text-align: center;
 }
