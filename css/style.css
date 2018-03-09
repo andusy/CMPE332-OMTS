@@ -1,0 +1,147 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+body{
+
+}
+
+#container{
+
+}
+
+footer{
+  background-color: #000;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width:100%;
+}
+
+#footer-user{
+  color: #FFF;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  padding-left: 10%;
+}
+
+#footer-user div{
+  display: inline-block;
+  text-align: left;
+  width:30%;
+}
+
+#footer-user div p{
+  display: inline-block;
+  cursor:pointer;
+}
+
+#footer-title p{
+
+}
+
+#footer-sign-up p{
+  background-color: #FFF;
+  color:#000;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-right: 20px;
+  padding-left: 20px;
+}
+
+#footer-admin p{
+  background-color: #000;
+  color:#FFF;
+  border: 2px solid #FFF;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-right: 20px;
+  padding-left: 20px;
+}
+
+hr{
+  text-align: center;
+  color: #333;
+  width: 80%;
+}
+
+#footer-links{
+  color: #FFF;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  padding-left: 10%;
+}
+
+#footer-links div{
+  display: inline-block;
+  text-align: left;
+  width:30%;
+  vertical-align: top;
+}
+
+#footer-links div ul{
+  list-style: none;
+  font-family: sans-serif;
+}
+
+#footer-links div ul li{
+  padding: 10px;
+}
+
+#footer-contact{
+  color: #FFF;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  padding-left: 10%;
+}
+
+#footer-contact div{
+  display: inline-block;
+  text-align: center;
+  width:40%;
+  vertical-align: top;
+}
+
+#footer-contact div ul{
+  list-style: none;
+}
+
+#footer-contact div ul li {
+  padding: 10px;
+}
+
+#footer-contact div ul li a{
+  color: #FFF;
+  text-decoration: none;
+}
+
+#footer-github img{
+  width: 100px;
+}
+
+#footer-linkedin img{
+  width: 100px;
+}
+
+#copyright{
+  color: #fff;
+  text-align: center;
+}
