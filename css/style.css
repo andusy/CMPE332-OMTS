@@ -25,6 +25,48 @@ body{
   flex-direction: column;
 }
 
+header{
+  width:100%;
+}
+
+header div{
+  float:left;
+  font-family: monospace;
+  font-size: 20px;
+}
+
+header div ul{
+  list-style: none;
+  padding-right:30px;
+}
+
+#header-left{
+  width: 50%;
+}
+
+#header-left p{
+  margin: 20px;
+}
+
+#header-right{
+  width: 50%;
+}
+
+#header-right ul li{
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-right:10px;
+  padding-left:10px;
+  float: right;
+  display: inline-block;
+}
+
+#header-right ul li:hover{
+  color:#3AB1C5;
+  border-bottom: 2px solid #3AB1C5;
+  border-radius: 1px 1px 1px 1px;
+}
+
 #container{
   flex: 1;
 }
