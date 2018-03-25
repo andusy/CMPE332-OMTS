@@ -13,6 +13,45 @@ body{
   min-height: 100vh;
   flex-direction: column;
 }
+
+.movies{
+  height: 100%;
+  background: url("../img/blackpanther.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+#content{
+}
+
+.bg-dark{
+	background-color: rgba(0, 0, 0)!important;
+}
+
+.navbar-nav {
+	padding: 0 40px;
+}
+
+.nav-link {
+	margin: 0 20px;
+}
+
+.navbar-brand{
+	font-family: 'Passion One', cursive;
+	letter-spacing: 2px;
+	font-weight:500;
+}
+
+.carousel-item img{
+	width: auto;
+	height: 600px;
+	max-height: 600px;
+}
+
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+    background-color: #FFFF00;
+    color: #FFC0CB;
+}
 /*
 header{
   width:100%;
@@ -55,6 +94,9 @@ header div ul{
   border-bottom: 2px solid #3AB1C5;
   border-radius: 1px 1px 1px 1px;
 }*/
+.navbar-brand {
+	font-size: 30px;
+}
 
 #container{
   flex: 1;
