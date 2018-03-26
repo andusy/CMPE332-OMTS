@@ -8,50 +8,184 @@ html {
 	vertical-align: baseline;
 }
 
+a {
+	text-decoration: none;
+}
+
+
 body{
   display: flex;
   min-height: 100vh;
   flex-direction: column;
 }
 
-.movies{
-  height: 100%;
-  background: url("../img/blackpanther.jpg");
-  background-size: cover;
-  background-position: center;
+.navbar {
+	background: rgba(0,0,0,0.5);
+	transition: 0.7s;
+	color: white !important;
 }
 
-#content{
+.navbar:hover{
+	background: rgba(0,0,0, 1);
+	transition: 0.7s;
 }
 
-.bg-dark{
-	background-color: rgba(0, 0, 0)!important;
+.navbar a{
+	color: white;
+	transition: 0.7s;
 }
 
-.navbar-nav {
-	padding: 0 40px;
+.navbar a:hover{
+	color: steelblue;
+	transition: 0.7s;
 }
 
-.nav-link {
-	margin: 0 20px;
+.navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+    background-color: rgba(255,255,255, 0.2);
 }
 
-.navbar-brand{
-	font-family: 'Passion One', cursive;
-	letter-spacing: 2px;
-	font-weight:500;
+.navbar-nav > li{
+  margin-right:15px;
 }
 
-.carousel-item img{
-	width: auto;
-	height: 600px;
-	max-height: 600px;
+ .navbar-brand {
+    background: url(../img/ticket.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 30px;
+    transform: translateX(-50%);
+    left: 50%;
+    position: absolute;
+    padding: 0;
+  }
+
+.container-2{
+  padding: 11px 0 0 0;
+  width: 200px;
+  vertical-align: middle;
+  white-space: nowrap;
+  position: relative;
 }
 
-.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
-    background-color: #FFFF00;
-    color: #FFC0CB;
+.container-2 input#search{
+  width: 30px;
+  height: 30px;
+  background: none;
+  border: none;
+  font-size: 10pt;
+  float: left;
+  color: #262626;
+  padding-left: 35px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  color: #fff;
+ 
+  -webkit-transition: width .55s ease;
+  -moz-transition: width .55s ease;
+  -ms-transition: width .55s ease;
+  -o-transition: width .55s ease;
+  transition: width .55s ease;
 }
+
+.container-2 input#search::-webkit-input-placeholder {
+   color: grey;
+}
+ 
+.container-2 input#search:-moz-placeholder { /* Firefox 18- */
+   color: grey;  
+}
+ 
+.container-2 input#search::-moz-placeholder {  /* Firefox 19+ */
+   color: grey;  
+}
+ 
+.container-2 input#search:-ms-input-placeholder {  
+   color: grey;  
+}
+
+.container-2 .icon{
+  position: absolute;
+  top: 50%;
+  margin-left: 11px;
+  margin-top: 10px;
+  z-index: 1;
+  color: #4f5b66;
+}
+
+.container-2 input#search:focus, .container-2 input#search:active{
+  outline:none;
+  width: 200px;
+}
+ 
+.container-2:hover input#search{
+  width: 200px;
+  background: rgba(255,255,255, 0.2);
+}
+ 
+.container-2:hover .icon{
+  color: #93a2ad;
+}
+
+.overlay{
+	background:black;
+	height: 100%;
+	opacity: 0.2;
+}
+
+#intro{
+	height: 700px;
+	position: relative;
+    text-align: center;
+    color: white;
+}
+
+#content {
+	z-index: 100;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	color: white;
+  	text-shadow: 0px 4px 3px rgba(0,0,0,0.4),
+               0px 8px 13px rgba(0,0,0,0.1),
+               9px 18px 23px rgba(0,0,0,0.1);
+}
+
+#content a{
+	padding: 1em;
+	font-weight: 800;
+	color: white;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-size: 1em;
+	letter-spacing: 0.4rem;
+}
+
+#content a:hover{
+	color: rgba(255,255,255,0.7);
+}
+
+#myCarousel {
+	position: relative;
+}
+
+.carousel-inner img{
+	filter: brightness(50%)
+}
+
+.carousel,
+.item,
+.active {
+    height: 100%;
+    margin-bottom: 60px;
+}
+
+.carousel-inner {
+    height: 100%;
+}
+
 /*
 header{
   width:100%;
@@ -94,9 +228,6 @@ header div ul{
   border-bottom: 2px solid #3AB1C5;
   border-radius: 1px 1px 1px 1px;
 }*/
-.navbar-brand {
-	font-size: 30px;
-}
 
 #container{
   flex: 1;
