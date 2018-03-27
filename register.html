@@ -1,33 +1,56 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Register</title>
-  <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css" />
-</head>
+	<head>
+		<!-- Required meta tags -->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+		<!-- TITLE -->
+		<title>Register for OMTS</title>
+
+		<!-- FAVICON -->
+		<link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png" />
+
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+
+		<!-- Google Fonts -->
+		<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" />
+
+		<!-- ICONS -->
+		<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous" type=text/css>
+
+		<!-- CSS -->
+		<link rel="stylesheet" type="text/css" href="css/register.css" />
+
+		<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>  
+	</head>
 <body>
-  <div class="container">
-    <h1>Register</h1>
-    <form action="php/register.php" method="POST">
-      <label for="fname">First Name:</label>
-      <input type="text" name="fname" />
-      <label for="lname">Last Name:</label>
-      <input type="text" name="lname" />
-      <label for="street">Street:</label>
-      <input type="text" name="street" />
-      <label for="city">City:</label>
-      <input type="text" name="city" />
-      <label for="postalCode">Postal Code:</label>
-      <input type="text" name="postalCode" />
-      <label for="emailAddress">Email:</label>
-      <input type="text" name="emailAddress" />
-      <label for="phoneNumber">Phone Number:</label>
-      <input type="text" name="phoneNumber" />
-      <label for="username">Username:</label>
-      <input type="text" name="username" />
-      <label for="password">Password:</label>
-      <input type="password" name="password" />
-      <button type="submit" class="btn btn-primary">Sign up</button>
-    </form>
-  </div>
+	<div class="background-image"></div>
+  	<div class="container">
+		<h1>Register</h1>
+		<form action="php/register.php" method="POST">
+			<label for="fname">First Name:</label>
+			<input type="text" name="fname" required/>
+			<label for="lname">Last Name:</label>
+			<input type="text" name="lname" required/>
+			<label for="street">Street:</label>
+			<input type="text" name="street" required/>
+			<label for="city">City:</label>
+			<input type="text" name="city" required/>
+			<label for="postalCode">Postal Code:</label>
+			<input type="text" name="postalCode" required/>
+			<label for="emailAddress">Email:</label>
+			<input type="text" name="emailAddress" required/>
+			<label for="phoneNumber">Phone Number:</label>
+			<input type="text" name="phoneNumber" required/>
+			<label for="username">Username:</label>
+			<input type="text" name="username" required/>
+			<label for="password">Password:</label>
+			<input type="password" name="password" required/>
+			<button type="submit" class="btn btn-primary">Sign up</button>
+		</form>
+  	</div>
 </body>
 </html>
