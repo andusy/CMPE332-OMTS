@@ -186,6 +186,15 @@ body{
     height: 100%;
 }
 
+.movies{
+	padding: 40px;
+	height: 600px;
+}
+
+.thumbnail{
+	margin-bottom: 0;
+}
+
 /*
 header{
   width:100%;
