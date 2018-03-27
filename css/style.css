@@ -191,6 +191,10 @@ body{
 	height: 600px;
 }
 
+.movies h5{
+	font-weight: 600;
+}
+
 .thumbnail{
 	margin-bottom: 0;
 }
