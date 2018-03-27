@@ -1,0 +1,26 @@
+<html>
+<head>
+
+<body>
+</body>
+<div id="popupbox">
+  <form name="login" action="" method="POST">
+  <center>Username:</center>
+  <center><input name="username" size="14" /></center>
+  <center>Password:</center>
+  <center><input name="password" type="password" size="14" /></center>
+  <center><input type="submit" name="submit" value="login" /></center>
+  </form>
+  <br/>
+  <center><a href="javascript:login('hide');">close</a></center>
+</div>
+<script language="JavaScript" type="text/javascript">
+function login(showhide){
+if(showhide == "show"){
+    document.getElementById('popupbox').style.visibility="visible";
+}else if(showhide == "hide"){
+    document.getElementById('popupbox').style.visibility="hidden";
+}
+}
+</script>
+<html>
