@@ -1,0 +1,31 @@
+.background-image {
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: 1;
+	
+  background-image: url('../img/kfp.jpg');
+  width: 80%;
+  height: 80%;
+
+  -webkit-filter: blur(2px);
+  -moz-filter: blur(2px);
+  -o-filter: blur(2px);
+  -ms-filter: blur(2px);
+  filter: blur(2px);
+}
+
+
+.container{
+	position: fixed;
+	left: 0;
+	right: 0;
+	z-index: 9999;
+	max-width: 450px;
+	background: grey;
+	margin: 150px auto;
+}
+
+.container h1{
+	text-align: center;
+}
