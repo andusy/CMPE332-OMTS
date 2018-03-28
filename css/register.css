@@ -15,6 +15,7 @@ body {
 }
 
 .container{
+	border-radius: 10px;
 	max-width: 400px;
 	font-family: 'Roboto', sans-serif;	
 	background: #f7f7f7;
@@ -30,11 +31,13 @@ body {
 }
 
 .container h1{
+	letter-spacing: 2px;
 	font-family: 'Oswald', sans-serif;
 	text-align: center;
 }
 
 .container h4{
+	letter-spacing: 1px;
 	text-align: center;	
 }
 
