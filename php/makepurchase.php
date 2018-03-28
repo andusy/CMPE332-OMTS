@@ -50,6 +50,7 @@
 					</div>
 				</ul>
 				<ul class="nav navbar-nav navbar-right">
+					  <li><a href="logout.php">Log Out</a></li>
 					  <li><a href="movie.php">Movies</a></li>
 					  <li><a href="memberpage.php">My Profile</a></li>
 					<li><a>
@@ -88,8 +89,18 @@
       WHERE title = '$title'
       ";
       $rows=$dbh->query($sql);
+			function getDatetimeNow() {
+			  $tz_object = new DateTimeZone('America/New_York');
+			  $datetime = new DateTime();
+			  $datetime->setTimezone($tz_object);
+			  return $datetime->format('Y\-m\-d\ h:i:s');
+			}
+
+			$currentDate = getDatetimeNow();
       foreach($rows as $row) {
+				if($row[0]>$currentDate){
         echo "<option value='" . $row[2] . "'>". $row[1] . " at " . $row[0] . "</option>";
+				}
         }
         $dbh = null;
     ?>

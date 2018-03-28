@@ -50,6 +50,7 @@
 					</div>
 				</ul>
 				<ul class="nav navbar-nav navbar-right">
+						<li><a href="logout.php">Log Out</a></li>
 					  <li><a href="movie.php">Movies</a></li>
 					  <li><a href="adminpage.php">Admin</a></li>
 				</ul>
