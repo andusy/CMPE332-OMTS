@@ -9,7 +9,7 @@ html {
 }
 
 body {
-	background: url(../img/tombraider.jpg);
+	background: url(../img/registerbg.jpg);
 	background-repeat: no-repeat;
 	background-size: cover;
 }
@@ -70,4 +70,8 @@ button{
 .onerow input{
 	width: 50%;
 	float: left;
+}
+
+p{
+	text-align: center;
 }
