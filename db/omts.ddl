@@ -108,10 +108,8 @@ CREATE TABLE Reservation(
 );
 
 CREATE TABLE MainActors(
-	actorID INT UNSIGNED NOT NULL AUTO_INCREMENT,
 	movieTitle VARCHAR(30) NOT NULL,
 	fname VARCHAR(30) NOT NULL,
 	lname VARCHAR(30) NOT NULL,
-	PRIMARY KEY (actorID),
 	FOREIGN KEY (movieTitle) REFERENCES Movie(title)
 );

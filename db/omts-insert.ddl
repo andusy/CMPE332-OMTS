@@ -97,7 +97,6 @@ INSERT INTO MainActors(movieTitle, fname, lname) VALUES
 	('Avengers: Infinity War', 'Chris', 'Hemsworth'),
 	('Avengers: Infinity War', 'Robert', 'Downey Jr.'),
 	('Guardians Of The Galaxy', 'Chris', 'Pratt'),
-	('Guardians Of The Galaxy', 'Chris', 'Pratt'),
 	('One Piece Film: Gold', 'Mayumi', 'Tanaka'),
 	('One Piece Film: Gold', 'Kappei', 'Yamaguchi'),
 	('One Piece Film: Gold', 'Kazuya', 'Nakai'),
