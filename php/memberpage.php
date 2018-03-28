@@ -51,7 +51,7 @@
 				</ul>
 				<ul class="nav navbar-nav navbar-right">
 					<li><a href="#">Theatres Complexes <i class="fa fa-angle-down" aria-hidden="true"></i></a></li>
-					  <li><a href="php/movie.php">Movies</a></li>
+					  <li><a href="movie.php">Movies</a></li>
 					  <li><a href="memberpage.php">My Profile</a></li>
 					<li><a>
 						<?php
@@ -138,6 +138,32 @@ if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true && $_SESSION['
 	  }
 	?>
 </table>
+
+<h3>My Reviews</h3>
+<hr>
+<table>
+<tr><th>Movie</th><th>Review</th><th>Rating</th></tr>
+	<?php
+	$username = $_SESSION['username'];
+	$id = "
+	SELECT accountNumber
+	FROM customer
+	WHERE username = '$username'
+	";
+	$account = $dbh->query($id);
+	$accountNumber = $account->fetchColumn(0);
+	$sql = "
+	SELECT movieTitle, reviewText, rating
+	FROM customerreview
+	WHERE accountNumber = '$accountNumber'
+	";
+	$rows = $dbh->query($sql);
+	foreach($rows as $row) {
+			echo "<tr><td>".$row[0]."</td><td>".$row[1]."</td><td>".$row[2]."</td></tr>";
+	  }
+	?>
+</table>
+
 <hr>
 <a href="editprofile.php"><button type="submit" class="btn btn-info">Edit Profile</button></a>
 </div>
