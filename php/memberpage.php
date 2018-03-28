@@ -140,7 +140,7 @@ if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true && $_SESSION['
 	?>
 </table>
 <hr>
-<button type="submit" class="btn btn-info">Edit Profile</button>
+<button type="submit" class="btn btn-info" href="editprofile.php">Edit Profile</button>
 </div>
 </body>
 </html>
