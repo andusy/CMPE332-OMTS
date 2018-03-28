@@ -98,6 +98,20 @@ if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true && $_SESSION['
 		    	$dbh = null;
 			?>
 		</table>
+	<h1>Add Movie</h1>
+	<form action="addmovie.php" method="POST">
+			<input type="text" name="title" placeholder="title" required/>
+			<input type="text" name="runTime" placeholder="runTime" required/>
+			<input type="text" name="plotSynopsis" placeholder="plotSynopsis" required/>
+			<input type="text" name="director" placeholder="director" required/>
+			<input type="text" name="productionCompany" placeholder="productionCompany" required/>
+			<input type="text" name="supplierName" placeholder="supplierName" required/>
+			<input type="text" name="startDate" placeholder="startDate" required/>
+			<input type="text" name="endDate" placeholder="endDate" required/>
+			<input type="text" name="rating" placeholder="rating" required/>
+			<button type="submit" class="btn btn-primary">Add Movie</button>
+		<hr>
+	</form>
 	<h1>Analytics</h1>
 	<h2>Most Popular Movies: </h2>
 	<table>
