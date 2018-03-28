@@ -55,11 +55,11 @@ if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true && $_SESSION['
 			foreach($rows as $row) {
 			echo "<tr><td>".$row[0]."</td><td>".$row[1]."</td><td>".$row[2]."</td><td>".$row[3]."</td><td>".$row[4]."</td><td>".$row[5]."</td><td>".$row[6]."</td><td>".$row[7]."</td><td>".$row[8]."</td><td>".$row[9]."</td>
 				<td>
-		        <button type='submit' class='btn btn-primary'><a href='viewRentalHistory.php?accountNumber=".$row[9]."''>Rental History</a></button>
-		      	</td>
-				<td>
-		        <button type='submit' class='btn btn-primary'><a href='deleteMember.php?accountNumber=".$row[9]."''>Delete</a></button>
-		      	</td>
+					<a href='viewRentalHistory.php?accountNumber=".$row[9]."''><button type='submit' class='btn btn-primary'>Rental History</button></a>
+					</td>
+					<td>
+						<a href='deleteMember.php?accountNumber=".$row[9]."''><button type='submit' class='btn btn-primary'>Delete</button></a>
+					</td>
 				</tr>";
 	    	}
 	    	$dbh = null;
