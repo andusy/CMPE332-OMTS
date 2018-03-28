@@ -11,8 +11,10 @@ if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true && $_SESSION['
     echo "You are not logged in.<br/>";
 }
 ?>
+
 <table>
 <tr><th>Theatre Complex</th><th>Theatre</th><th>Start Time</th><th>Title</th></tr>
+
 <?php
 $currentUser = $_SESSION['username'];
 
