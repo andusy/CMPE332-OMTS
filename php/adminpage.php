@@ -34,19 +34,12 @@ session_start();
 if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true && $_SESSION['admin'] == true) {
 } else {
     echo "Log in Please";
+		die();
 }?>
 
-<ul class="nav nav-tabs">
-  <li role="presentation" class="active"><a href="#">Member List</a></li>
-  <li role="presentation"><a href="#">Theatre Complex</a></li>
-  <li role="presentation"><a href="#">Movies</a></li>
-  <li role="presentation"><a href="#">Popular Movie</a></li>
-  <li role="presentation"><a href="#">Popular Theatre Complex</a></li>
-</ul>
 	<h1>Members</h1>
 	<table>
 		<tr><th>First Name</th><th>Last Name</th><th>Address</th><th>City</th><th>Postal Code</th><th>Email Address</th><th>Phone Number</th><th>Username</th><th>Password</th><th>Account Number</th></tr>
-
 		<?php
 			include 'dbconnect.php';
 
@@ -105,8 +98,43 @@ if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true && $_SESSION['
 		    	$dbh = null;
 			?>
 		</table>
-
-	<h1>Popular Movie</h1>
-	<h1>Popular Theatre Complex</h1>
+	<h1>Analytics</h1>
+	<h2>Most Popular Movies: </h2>
+	<table>
+	<tr><th>Movie</th><th>Tickets Sold</th></tr>
+	<?php
+		include 'dbconnect.php';
+		$sql = "
+		SELECT title, SUM(ticketsReserved)
+		FROM reservation
+		JOIN showing on showing.showingID = reservation.showingID
+		GROUP BY reservation.showingID
+		ORDER BY SUM(ticketsReserved) DESC
+		";
+		$rows = $dbh->query($sql);
+		foreach($rows as $row) {
+			echo "<tr><td>".$row[0]."</td><td>".$row[1]."</td></tr>";
+			}
+		?>
+	</table>
+	<h2>Most Popular Theatre Complex: </h2>
+	<table>
+	<tr><th>Complex Address</th><th>Tickets Sold</th></tr>
+	<?php
+		include 'dbconnect.php';
+		$sql = "
+		SELECT address, SUM(ticketsReserved)
+		FROM reservation
+		JOIN showing on showing.showingID = reservation.showingID
+		JOIN theatrecomplex on theatrecomplex.theatreCompID = showing.theatreCompID
+		GROUP BY theatrecomplex.theatreCompID
+		ORDER BY SUM(ticketsReserved) DESC
+		";
+		$rows = $dbh->query($sql);
+		foreach($rows as $row) {
+			echo "<tr><td>".$row[0]."</td><td>".$row[1]."</td></tr>";
+			}
+		?>
+	</table>
 </body>
 </html>
