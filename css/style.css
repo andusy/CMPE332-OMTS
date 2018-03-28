@@ -187,8 +187,9 @@ body{
 }
 
 .movies{
+	margin-top: 20px;
 	padding: 40px;
-	height: 500px;
+	height: 475px;
 }
 
 .movies h5{
@@ -248,14 +249,11 @@ header div ul{
 
 footer{
   background-color: #000;
+  text-decoration: none;
   right: 0;
   bottom: 0;
   left: 0;
   width:100%;
-}
-
-#footer-title p{
-
 }
 
 #footer-sign-up p{
@@ -275,6 +273,11 @@ footer{
   padding-bottom: 10px;
   padding-right: 20px;
   padding-left: 20px;
+}
+
+#footer-first{
+	text-decoration: none!important;
+	color: white!important;
 }
 
 hr{
