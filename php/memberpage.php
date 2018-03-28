@@ -107,7 +107,7 @@ if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true && $_SESSION['
 	  if($row[2]>$currentDate){
 			echo "<tr><td>".$row[0]."</td><td>".$row[1]."</td><td>".$row[2]."</td><td>".$row[3]."</td><td>".$row[4]."</td>
 		  <td>
-			<button type='submit' class='btn btn-primary'><a href='deletereservation.php?reservationID=".$row[4]."''>Cancel</a></button>
+			<a href='deletereservation.php?reservationID=".$row[4]."''><button type='submit' class='btn btn-primary'>Cancel</button></a>
 		  </td></tr>";
 		}
 	}
