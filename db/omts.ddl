@@ -72,7 +72,7 @@ CREATE TABLE Movie (
 	supplierName VARCHAR(30) NOT NULL,
 	startDate DATE NOT NULL,
 	endDate DATE NOT NULL,
-	rating INT UNSIGNED,
+	rating VARCHAR(5) NOT NULL,
 	PRIMARY KEY (title),
 	FOREIGN KEY (supplierName) REFERENCES Supplier(lname)
 );

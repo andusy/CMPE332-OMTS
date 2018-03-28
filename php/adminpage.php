@@ -95,9 +95,9 @@ if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true && $_SESSION['
 				echo "<tr><td>".$row[0]."</td><td>".$row[1]."</td><td>".$row[2]."</td><td>".$row[3]."</td><td>".$row[4]."</td><td>".$row[5]."</td><td>".$row[6]."</td><td>".$row[7]."</td>";
 
 				if ($row[8] == null){
-					echo "<td>0</td>";
+					echo "<td>NA</td>";
 				} else {
-					echo "<td>".$row[0]."</td>";
+					echo "<td>".$row[8]."</td>";
 				}
 
 				echo "</tr>";
