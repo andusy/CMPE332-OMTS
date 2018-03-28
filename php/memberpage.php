@@ -37,7 +37,6 @@ WHERE username = '$username'
 ";
 $rows = $dbh->query($sql);
 foreach($rows as $row) {
-  echo $row[2];
   if($row[2]>$currentDate){
   		echo "<tr><td>".$row[0]."</td><td>".$row[1]."</td><td>".$row[2]."</td><td>".$row[3]."</td><td>".$row[4]."</td>
       <td>
@@ -52,6 +51,16 @@ foreach($rows as $row) {
 <table>
 <tr><th>Movie</th><th>Theatre</th><th>Start Time</th><th>Seats Reserved</th><th>Reservation ID</th></tr>
 <?php
+$username = $_SESSION['username'];
+$sql = "
+SELECT title, theatreComplex.address, startTime, ticketsReserved, reservationID
+FROM reservation
+JOIN showing on showing.showingID = reservation.showingID
+JOIN theatrecomplex on theatrecomplex.theatreCompID = showing.theatreCompID
+JOIN customer on customer.accountNumber = reservation.accountNumber
+WHERE username = '$username'
+";
+$rows = $dbh->query($sql);
 foreach($rows as $row) {
   if($row[2]<$currentDate){
   		echo "<tr><td>".$row[0]."</td><td>".$row[1]."</td><td>".$row[2]."</td><td>".$row[3]."</td><td>".$row[4]."</td>
