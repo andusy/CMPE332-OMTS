@@ -15,7 +15,12 @@ try {
 	$sql = "INSERT INTO customer (fname, lname, address, city, postalCode, emailAddress, phoneNumber, username, password)
 	VALUES ('$fname', '$lname', '$address', '$city', '$postalCode', '$emailAddress', '$phoneNumber', '$username', '$password')";
 	$dbh->exec($sql);
-	echo "<h3>Hello User: $fname</h3> <h2>Successfully created account</h2>";
+	session_start();
+	$_SESSION['loggedin'] = true;
+	$_SESSION['admin'] = false;
+	$_SESSION['username'] = $username;
+	header("Location: ../loggedin.php");
+	die();
 }
 catch(PDOException $e) {
 	echo "<h3>FAIL</h3>";
