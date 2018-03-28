@@ -1,0 +1,146 @@
+body {
+	background: url(../img/movie.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.navbar {
+	background: rgba(0,0,0,0.5);
+	transition: 0.7s;
+	color: white !important;
+}
+
+.navbar:hover{
+	background: rgba(0,0,0, 1);
+	transition: 0.7s;
+}
+
+.navbar a{
+	color: white;
+	transition: 0.7s;
+}
+
+.navbar a:hover{
+	color: steelblue;
+	transition: 0.7s;
+}
+
+.navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+    background-color: rgba(255,255,255, 0.2);
+}
+
+.navbar-nav > li{
+  margin-right:15px;
+}
+
+ .navbar-brand {
+    background: url(../img/ticket.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 30px;
+    transform: translateX(-50%);
+    left: 50%;
+    position: absolute;
+    padding: 0;
+  }
+
+.container-2{
+  padding: 11px 0 0 0;
+  width: 200px;
+  vertical-align: middle;
+  white-space: nowrap;
+  position: relative;
+}
+
+.container-2 input#search{
+  width: 30px;
+  height: 30px;
+  background: none;
+  border: none;
+  font-size: 10pt;
+  float: left;
+  color: #262626;
+  padding-left: 35px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  color: #fff;
+ 
+  -webkit-transition: width .55s ease;
+  -moz-transition: width .55s ease;
+  -ms-transition: width .55s ease;
+  -o-transition: width .55s ease;
+  transition: width .55s ease;
+}
+
+.container-2 input#search::-webkit-input-placeholder {
+   color: grey;
+}
+ 
+.container-2 input#search:-moz-placeholder { /* Firefox 18- */
+   color: grey;  
+}
+ 
+.container-2 input#search::-moz-placeholder {  /* Firefox 19+ */
+   color: grey;  
+}
+ 
+.container-2 input#search:-ms-input-placeholder {  
+   color: grey;  
+}
+
+.container-2 .icon{
+  position: absolute;
+  top: 50%;
+  margin-left: 11px;
+  margin-top: 10px;
+  z-index: 1;
+  color: #4f5b66;
+}
+
+.container-2 input#search:focus, .container-2 input#search:active{
+  outline:none;
+  width: 200px;
+}
+ 
+.container-2:hover input#search{
+  width: 200px;
+  background: rgba(255,255,255, 0.2);
+}
+ 
+.container-2:hover .icon{
+  color: #93a2ad;
+}
+
+.content{
+	letter-spacing: 0.2px;
+	border-radius: 2px;
+	max-width: 400px;
+	font-family: 'Roboto', sans-serif;	
+	background: #f7f7f7;
+	margin: 200px auto;
+	padding: 30px;
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+
+h3 {
+	margin: 20px 0;
+	text-align: center;
+}
+
+.btn {
+	margin-top: 20px;
+	letter-spacing: 1px;
+	border-radius: 0;
+	font-family: 'Roboto', sans-serif;	
+	padding: 10px;
+	background-color: #05A8AA;
+}
+
+input {
+	float:left;
+	width:100%;	
+	font-size: 15px;
+}
