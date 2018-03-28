@@ -29,7 +29,10 @@ WHERE username = '$username'
 ";
 $rows = $dbh->query($sql);
 foreach($rows as $row) {
-		echo "<tr><td>".$row[0]."</td><td>".$row[1]."</td><td>".$row[2]."</td><td>".$row[3]."</td><td>".$row[4]."</td></tr>";
+		echo "<tr><td>".$row[0]."</td><td>".$row[1]."</td><td>".$row[2]."</td><td>".$row[3]."</td><td>".$row[4]."</td>
+    <td>
+      <button type='submit' class='btn btn-primary'><a href='deletereservation.php?reservationID=".$row[4]."''>Cancel</a></button>
+    </td></tr>";
     }
 ?>
 </table>
