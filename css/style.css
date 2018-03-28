@@ -81,7 +81,7 @@ body{
   -moz-border-radius: 5px;
   border-radius: 5px;
   color: #fff;
- 
+
   -webkit-transition: width .55s ease;
   -moz-transition: width .55s ease;
   -ms-transition: width .55s ease;
@@ -92,17 +92,17 @@ body{
 .container-2 input#search::-webkit-input-placeholder {
    color: grey;
 }
- 
+
 .container-2 input#search:-moz-placeholder { /* Firefox 18- */
-   color: grey;  
+   color: grey;
 }
- 
+
 .container-2 input#search::-moz-placeholder {  /* Firefox 19+ */
-   color: grey;  
+   color: grey;
 }
- 
-.container-2 input#search:-ms-input-placeholder {  
-   color: grey;  
+
+.container-2 input#search:-ms-input-placeholder {
+   color: grey;
 }
 
 .container-2 .icon{
@@ -118,12 +118,12 @@ body{
   outline:none;
   width: 200px;
 }
- 
+
 .container-2:hover input#search{
   width: 200px;
   background: rgba(255,255,255, 0.2);
 }
- 
+
 .container-2:hover .icon{
   color: #93a2ad;
 }
@@ -252,24 +252,6 @@ footer{
   bottom: 0;
   left: 0;
   width:100%;
-}
-
-#footer-user{
-  color: #FFF;
-  margin-top: 50px;
-  margin-bottom: 50px;
-  padding-left: 10%;
-}
-
-#footer-user div{
-  display: inline-block;
-  text-align: left;
-  width:30%;
-}
-
-#footer-user div p{
-  display: inline-block;
-  cursor:pointer;
 }
 
 #footer-title p{

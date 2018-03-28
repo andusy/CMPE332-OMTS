@@ -179,20 +179,6 @@
 	</div>
 
 	<footer>
-		<div id="footer-user">
-			<div id="footer-title">
-				<p>OMTS</p>
-			</div>
-			<div id="footer-sign-up">
-				<p>SIGN UP</p>
-			</div>
-			<div id="footer-admin">
-				<p>BECOME AN ADMIN</p>
-			</div>
-		</div>
-
-		<hr>
-
 		<div id="footer-links">
 			<div id="footer-first">
 				<ul>
