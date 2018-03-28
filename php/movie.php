@@ -42,7 +42,11 @@
 	";
 	$rows = $dbh->query($sql);
 	foreach($rows as $row) {
-			echo "<tr><td>".$row[0]."</td><td>".$row[1]."</td><td>".$row[2]."</td><td>".$row[3]."</td><td>".$row[4]."</td></tr>";
+			echo "<tr><td>".$row[0]."</td><td>".$row[1]."</td><td>".$row[2]."</td><td>".$row[3]."</td><td>".$row[4]."</td>
+				<td>
+					<a href='addReview.php?title=".$row[0]."''><button type='submit' class='btn btn-primary'>Review</button></a>
+				</td>
+			</tr>";
 	    }
 	    $dbh = null;
 	?>
