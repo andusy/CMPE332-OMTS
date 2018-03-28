@@ -24,10 +24,14 @@
 		<link rel="stylesheet" type="text/css" href="css/style.css" />
 
 		<!-- jQuery first, then Popper.js, then Bootstrap JS -->
-		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+		<script
+		  src="https://code.jquery.com/jquery-3.3.1.min.js"
+		  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+		  crossorigin="anonymous"></script>
 	</head>
 
 	<body>
+		<div id="main"></div>
 	<!-- NAV -->
 	<nav class="navbar navbar-fixed-top">
 		<div class="container-fluid">
@@ -52,9 +56,14 @@
 				</ul>
 				<ul class="nav navbar-nav navbar-right">
 					<li><a href="#">Theatres Complexes <i class="fa fa-angle-down" aria-hidden="true"></i></a></li>
-          <li><a href="movies.html">Movies</a></li>
-          <li><a href="register.html">Register</a></li>
-					<li><a href="customerlogin.html">Sign In</a></li>
+				    <li><a href="php/movie.php">Movies</a></li>
+				    <li><a href="php/memberpage.php">My Profile</a></li>
+					  <li><a>
+            <?php
+              session_start();
+              echo $_SESSION['username'];
+            ?>
+          </a></li>
 				</ul>
 			</div>
 			<!-- /.navbar-collapse -->
@@ -214,7 +223,6 @@
 			</div>
 		</div>
 	</footer>
-	<script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
 	<!-- Latest compiled and minified JavaScript -->
 	<script src="js/bootstrap.min.js"></script>
 	<!-- JS Script -->

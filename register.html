@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<!-- Required meta tags -->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+		<!-- TITLE -->
+		<title>Register for OMTS</title>
+
+		<!-- FAVICON -->
+		<link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png" />
+
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+
+		<!-- Google Fonts -->
+		<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" />
+		<link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+
+		<!-- ICONS -->
+		<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous" type=text/css>
+
+		<!-- CSS -->
+		<link rel="stylesheet" type="text/css" href="css/register.css" />
+
+		<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	</head>
+<body>
+  	<div class="container">
+		<a href="index.html"><img src="img/ticket.png" width="50px"/></a>
+		<h1>OMTS</h1>
+		<h4> Sign Up To Purchase Tickets Now! </h4>
+		<form action="php/register.php" method="POST">
+			<div class="onerow">
+				<input type="text" name="fname" placeholder="First Name" required/>
+				<input type="text" name="lname" placeholder="Last Name" required/>
+			</div>
+			<input type="text" name="emailAddress" placeholder="Email" required/>
+			<input type="text" name="phoneNumber" placeholder="Phone Number" required/>
+			<input type="text" name="address" placeholder="Address" required/>
+			<input type="text" name="city" placeholder="City" required/>
+			<input type="text" name="postalCode" placeholder="Postal" required/>
+			<input type="text" name="username" placeholder="Username" required/>
+			<input type="password" name="password" placeholder="Password" required/>
+			<button type="submit" class="btn btn-primary">SIGN UP</button>
+			<hr>
+			<p>Already a member? <a href="customerlogin.html">Sign In Now!</a></p>
+		</form>
+  	</div>
+</body>
+</html>
