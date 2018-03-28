@@ -54,6 +54,14 @@
 					<li><a href="#">Theatres Complexes <i class="fa fa-angle-down" aria-hidden="true"></i></a></li>
 					  <li><a href="movie.php">Movies</a></li>
 					  <li><a href="adminpage.php">Admin</a></li>
+						<li><a>
+							<?php
+								session_start();
+								if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true && $_SESSION['admin'] == false) {
+									echo $_SESSION['username'];
+								}
+							?>
+							</a></li>
 				</ul>
 			</div>
 			<!-- /.navbar-collapse -->
@@ -62,7 +70,6 @@
 	</nav>
 <div class="content">
 	<?php
-	session_start();
 	if(isset($_GET['title'])){
 		$_SESSION['title']= $_GET['title'];
 	}
