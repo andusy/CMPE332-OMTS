@@ -5,6 +5,7 @@
 <body>
 <h1>
 <?php
+include 'dbconnect.php';
 session_start();
 if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true && $_SESSION['admin'] == false) {
     echo $_SESSION['username'];
@@ -15,17 +16,20 @@ if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true && $_SESSION['
 </h1>
 <h2>My Tickets</h2>
 <table>
-<tr><th>Theatre Complex</th><th>Theatre</th><th>Start Time</th><th>Title</th></tr>
+<tr><th>Movie</th><th>Theatre</th><th>Start Time</th><th>Seats Reserved</th><th>Reservation ID</th></tr>
 <?php
-$currentUser = $_SESSION['username'];
-
-include_once 'dbconnect.php';
-
-$rows = $dbh->query("select address, theatreNumber, startTime, title
-from showing
-join theatrecomplex on theatrecomplex.theatreCompID = showing.theatreCompID");
+$username = $_SESSION['username'];
+$sql = "
+SELECT title, theatreComplex.address, startTime, ticketsReserved, reservationID
+FROM reservation
+JOIN showing on showing.showingID = reservation.showingID
+JOIN theatrecomplex on theatrecomplex.theatreCompID = showing.theatreCompID
+JOIN customer on customer.accountNumber = reservation.accountNumber
+WHERE username = '$username'
+";
+$rows = $dbh->query($sql);
 foreach($rows as $row) {
-		echo "<tr><td>".$row[0]."</td><td>".$row[1]."</td><td>".$row[2]."</td><td>".$row[3]."</td></tr>";
+		echo "<tr><td>".$row[0]."</td><td>".$row[1]."</td><td>".$row[2]."</td><td>".$row[3]."</td><td>".$row[4]."</td></tr>";
     }
 ?>
 </table>
