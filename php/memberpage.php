@@ -18,7 +18,8 @@ session_start();
 if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true && $_SESSION['admin'] == false) {
     echo $_SESSION['username'];
 } else {
-    echo "You are not logged in.<br/>";
+    echo "You are not logged in.";
+    die();
 }
 ?>
 </h1>
