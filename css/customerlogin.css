@@ -9,7 +9,7 @@ html {
 }
 
 body {
-	background: url(../img/tombraider.jpg);
+	background: url(../img/loginbg.jpg);
 	background-repeat: no-repeat;
 	background-size: cover;
 }
@@ -55,12 +55,20 @@ input:focus{
 	outline: none;
 }
 
-input[name="fname"], input[name="lname"], input[name="phoneNumber"], input[name="postalCode"], input[type="password"] {
+input[type="text"]{
+	margin-top: 20px;
+}
+
+input[type="password"] {
 	margin-bottom: 20px;
 }
 
 button{
 	width: 100%;
+}
+
+p{
+	text-align: center;
 }
 
 .onerow{

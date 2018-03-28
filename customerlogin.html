@@ -27,17 +27,19 @@
 		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>  	
 	</head>
 <body>
-</body>
-<div id="popupbox">
-  <form name="login" action="php/customerlogin.php" method="POST">
-	  <div class="container">
-		  <center>Username:</center>
-		  <center><input name="username" size="14" /></center>
-		  <center>Password:</center>
-		  <center><input name="password" type="password" size="14" /></center>
-		  <center><input type="submit" name="submit" value="login" /></center>
-	  </div>
-  </form>
-  <br/>
+	<div id="popupbox">
+	<div class="container">
+	<img src="img/ticket.png" width="50px"/>
+	<h1>OMTS</h1>
+	<h4> Sign In! </h4>
+  	<form name="login" action="php/customerlogin.php" method="POST">
+		<input name="username" type="text" placeholder="Username" required>
+		<input name="password" type="password" placeholder="Password" required />
+		<button type="submit" class="btn btn-primary">SIGN IN</button>
+  	</form>
+	<hr>
+	<p>New to OMTS? <a href="register.html">Register Now!</a></p>
+	</div>
 </div>
-<html>
+</body>
+</html>
