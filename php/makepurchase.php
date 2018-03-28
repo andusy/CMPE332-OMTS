@@ -50,8 +50,7 @@
 					</div>
 				</ul>
 				<ul class="nav navbar-nav navbar-right">
-					<li><a href="#">Theatres Complexes <i class="fa fa-angle-down" aria-hidden="true"></i></a></li>
-					  <li><a href="php/movie.php">Movies</a></li>
+					  <li><a href="movie.php">Movies</a></li>
 					  <li><a href="memberpage.php">My Profile</a></li>
 					<li><a>
 						<?php
@@ -67,7 +66,7 @@
 		</div>
 		<!-- /.container-fluid -->
 	</nav>
-	
+
 <?php
   include 'dbconnect.php';
   $title = $_POST["title"];
