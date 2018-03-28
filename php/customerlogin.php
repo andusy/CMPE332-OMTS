@@ -13,11 +13,8 @@ if($count==1){
     $_SESSION['loggedin'] = true;
     $_SESSION['admin'] = false;
     $_SESSION['username'] = $username;
-    echo "
-<h1>
-
-</h1>
-";
+    header("Location: ../loggedin.html");
+    die();;
 } else {
   echo "Fail";
 }
