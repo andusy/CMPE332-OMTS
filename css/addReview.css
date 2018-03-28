@@ -1,0 +1,9 @@
+.review{
+	width: 100%;
+	height: 300px;
+}
+
+.btn{
+	clear: both;
+	float: right;
+}
