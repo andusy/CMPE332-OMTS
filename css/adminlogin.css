@@ -1,0 +1,81 @@
+html {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font-family: 'Roboto', sans-serif;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+body {
+	background: url(../img/loginbg.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.container{
+	border-radius: 10px;
+	max-width: 400px;
+	font-family: 'Roboto', sans-serif;	
+	background: #f7f7f7;
+	margin: 100px auto;
+	padding: 30px;
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.container img{
+	display: block;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.container h1{
+	letter-spacing: 2px;
+	font-family: 'Oswald', sans-serif;
+	text-align: center;
+}
+
+.container h4{
+	letter-spacing: 1px;
+	text-align: center;	
+}
+
+input{
+	width: 100%;
+	font-size: 15px;
+	padding: 5px 10px;
+	box-sizing: border-box;
+	border: 0.1px solid grey;
+}
+
+input:focus{
+	background-color: white;
+	border: 0.2px solid #2980b9;
+	outline: none;
+}
+
+input[type="text"]{
+	margin-top: 20px;
+}
+
+input[type="password"] {
+	margin-bottom: 20px;
+}
+
+button{
+	width: 100%;
+}
+
+p{
+	text-align: center;
+}
+
+.onerow{
+	padding: 20px 0px;
+}
+
+.onerow input{
+	width: 50%;
+	float: left;
+}
