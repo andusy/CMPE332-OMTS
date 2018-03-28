@@ -72,17 +72,18 @@
 	<h1>Movies</h1>
 	<hr>
 	<table>
-	<tr><th>Movie</th><th>Run Time (Minutes)</th><th>Plot Synopsis</th><th>Director</th><th>Production Company</th></tr>
+		<tr><th>Movie</th><th>Run Time (Minutes)</th><th>Plot Synopsis</th><th>Director</th><th>Production Company</th><th>Rating</th><th>Review</th></tr>
 
 	<?php
 	include 'dbconnect.php';
 	$sql = "
-	SELECT title, runTime, plotSynopsis, director, productionCompany
+	SELECT title, runTime, plotSynopsis, director, productionCompany, rating
 	FROM movie
 	";
 	$rows = $dbh->query($sql);
 	foreach($rows as $row) {
-			echo "<tr><td>".$row[0]."</td><td>".$row[1]."</td><td>".$row[2]."</td><td>".$row[3]."</td><td>".$row[4]."</td>
+			echo "<tr><td>".$row[0]."</td><td>".$row[1]."</td><td>".$row[2]."</td><td>".$row[3]."</td><td>".$row[4]."</td><td>".$row[5]."
+			</td>
 				<td>
 					<a href='addReview.php?title=".$row[0]."''><button type='submit' class='btn btn-primary'>Review</button></a>
 				</td>
@@ -110,7 +111,7 @@
 		    $dbh = null;
 		?>
 	</select>
-	Number of Tickets: <input type = "text" name = "numTickets">
+	<label>Number of Tickets:</label> <input type = "text" name = "numTickets">
 	<button type="submit" class="btn btn-primary">See Showings</button>
 	</form>
 	</div>
