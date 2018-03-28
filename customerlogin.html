@@ -1,15 +1,42 @@
 <html>
-<head>
+	<head>
+		<!-- Required meta tags -->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+		<!-- TITLE -->
+		<title>Sign in to OMTS</title>
+
+		<!-- FAVICON -->
+		<link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png" />
+		
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+
+		<!-- Google Fonts -->
+		<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" />
+		<link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+		
+		<!-- ICONS -->
+		<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous" type=text/css>
+
+		<!-- CSS -->
+		<link rel="stylesheet" type="text/css" href="css/customerlogin.css" />
+
+		<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>  	
+	</head>
 <body>
 </body>
 <div id="popupbox">
   <form name="login" action="php/customerlogin.php" method="POST">
-  <center>Username:</center>
-  <center><input name="username" size="14" /></center>
-  <center>Password:</center>
-  <center><input name="password" type="password" size="14" /></center>
-  <center><input type="submit" name="submit" value="login" /></center>
+	  <div class="container">
+		  <center>Username:</center>
+		  <center><input name="username" size="14" /></center>
+		  <center>Password:</center>
+		  <center><input name="password" type="password" size="14" /></center>
+		  <center><input type="submit" name="submit" value="login" /></center>
+	  </div>
   </form>
   <br/>
 </div>
