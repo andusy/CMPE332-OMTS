@@ -1,4 +1,8 @@
 # CMPE332 Final Project
+# Contributors
+* [Sean Lee](https://github.com/seanblee)
+* [Darian Lio](https://github.com/darianlio)
+
 ## Database Description
 * The are multiple theatre complexes in the city. Each theatre complex contains some number of theatres and has a name, address and a phone number. Each theatre in a theatre complex has a theatre number, a maximum number of seats and a screen size (small, medium or large).  You must have at least 3 theatre complexes represented in your project.
 * Each current movie has a title, a running time, a rating (G, PG, AA, 14A, R, etc), a plot synopsis, a list of main actors, a director, a production company, the name of the supplier and the start and end dates for the movie's run at the theatre complex. The movie has one or more daily showings at the theatre complex specified by a start time. Each showing has the number of the theatre for the showing, the start time and the number of seats still available. 
@@ -31,8 +35,4 @@ add a review for a movie.
 for a particular customer, show their rental history (including current tickets held)
 * find the movie that is the most popular (ie. has sold the most tickets across all theatres).
 * find the theatre complex that is most popular (ie. has sold the most tickets across all movies)
-
-# Contributors
-* [Sean Lee](https://github.com/seanblee)
-* [Darian Lio](https://github.com/darianlio)
 
