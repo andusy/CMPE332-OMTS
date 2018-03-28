@@ -29,26 +29,20 @@
 <body>
 	<div class="background-image"></div>
   	<div class="container">
-		<h1>Register</h1>
+		<h1>OMTS</h1>
+		<p> Register Now! </p>
 		<form action="php/register.php" method="POST">
-			<label for="fname">First Name:</label>
-			<input type="text" name="fname" required/>
-			<label for="lname">Last Name:</label>
-			<input type="text" name="lname" required/>
-			<label for="street">Street:</label>
-			<input type="text" name="street" required/>
-			<label for="city">City:</label>
-			<input type="text" name="city" required/>
-			<label for="postalCode">Postal Code:</label>
-			<input type="text" name="postalCode" required/>
-			<label for="emailAddress">Email:</label>
-			<input type="text" name="emailAddress" required/>
-			<label for="phoneNumber">Phone Number:</label>
-			<input type="text" name="phoneNumber" required/>
-			<label for="username">Username:</label>
-			<input type="text" name="username" required/>
-			<label for="password">Password:</label>
-			<input type="password" name="password" required/>
+			<div class="onerow">
+				<input type="text" name="fname" placeholder="First Name" required/>
+				<input type="text" name="lname" placeholder="Last Name" required/>
+			</div>
+			<input type="text" name="emailAddress" placeholder="Email" required/>
+			<input type="text" name="phoneNumber" placeholder="Phone Number" required/>
+			<input type="text" name="street" placeholder="Street" required/>
+			<input type="text" name="city" placeholder="City" required/>
+			<input type="text" name="postalCode" placeholder="Postal" required/>
+			<input type="text" name="username" placeholder="Username" required/>
+			<input type="password" name="password" placeholder="Password" required/>
 			<button type="submit" class="btn btn-primary">Sign up</button>
 		</form>
   	</div>
