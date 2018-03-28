@@ -138,7 +138,7 @@ if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true && $_SESSION['
 		SELECT title, SUM(ticketsReserved)
 		FROM reservation
 		JOIN showing on showing.showingID = reservation.showingID
-		GROUP BY reservation.showingID
+		GROUP BY title
 		ORDER BY SUM(ticketsReserved) DESC
 		";
 		$rows = $dbh->query($sql);
