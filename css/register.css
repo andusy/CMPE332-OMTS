@@ -1,31 +1,38 @@
-.background-image {
-  position: fixed;
-  left: 0;
-  right: 0;
-  z-index: 1;
-	
-  background-image: url('../img/kfp.jpg');
-  width: 80%;
-  height: 80%;
-
-  -webkit-filter: blur(2px);
-  -moz-filter: blur(2px);
-  -o-filter: blur(2px);
-  -ms-filter: blur(2px);
-  filter: blur(2px);
+body {
+	background: url(../img/tombraider.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
 }
 
-
 .container{
-	position: fixed;
-	left: 0;
-	right: 0;
-	z-index: 9999;
-	max-width: 450px;
+	max-width: 500px;
 	background: grey;
-	margin: 150px auto;
+	margin: 100px auto;
 }
 
 .container h1{
 	text-align: center;
+}
+
+input{
+	width: 100%;
+	font-size: 18px;
+	padding: 5px 10px;
+	box-sizing: border-box;
+	border: 0.2px solid grey;
+}
+
+input:focus{
+	background-color: white;
+	border: 0.2px solid #2980b9;
+	outline: none;
+}
+
+.onerow{
+	padding: 20px 0px;
+}
+
+.onerow input{
+	width: 50%;
+	float: left;
 }
