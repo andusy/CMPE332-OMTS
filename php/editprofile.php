@@ -22,7 +22,7 @@
 		<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous" type=text/css>
 
 		<!-- CSS -->
-		<link rel="stylesheet" type="text/css" href="../css/editprofile.css" />
+		<link rel="stylesheet" type="text/css" href="../css/editcopy.css" />
 
 		<!-- jQuery first, then Popper.js, then Bootstrap JS -->
 		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
@@ -68,7 +68,7 @@
 	</nav>
 
   	<div class="container">
-		<a href="loggedin.php"><img src="../img/ticket.png" width="50px"/></a>
+		<a href="../loggedin.php"><img src="../img/ticket.png" width="50px"/></a>
 		<h1>Edit Profile</h1>
 		<form action="php/editprofile2.php" method="POST">
 			<div class="onerow">
