@@ -78,16 +78,19 @@ INSERT INTO CustomerReview (movieTitle, reviewText, rating, accountNumber) VALUE
 
 INSERT INTO Showing(theatreCompID, theatreNumber, startTime, title) VALUES
 	(1, 1, TIMESTAMP '2018-3-27 21:00:00', "Black Panther"),
-	(2, 1, TIMESTAMP '2018-3-27 21:00:00', "Black Panther"),
-	(3, 1, TIMESTAMP '2018-3-27 20:30:00', "Black Panther"),
-	(1, 2, TIMESTAMP '2018-3-27 19:30:00', "One Piece Film: Gold"),
-	(3, 2, TIMESTAMP '2018-3-27 16:00:00', "Avengers: Infinity War")
+	(2, 1, TIMESTAMP '2018-3-28 21:00:00', "Black Panther"),
+	(3, 1, TIMESTAMP '2018-3-29 20:30:00', "Black Panther"),
+	(1, 2, TIMESTAMP '2018-3-30 19:30:00', "One Piece Film: Gold"),
+	(3, 2, TIMESTAMP '2018-3-26 16:00:00', "Avengers: Infinity War")
 ;
 
-/*
 INSERT INTO Reservation (showingID, accountNumber, ticketsReserved) VALUES
+	(1,1,1),
+	(1,2,2),
+	(2,3,2),
+	(3,1,4)
 ;
-*/
+
 
 INSERT INTO MainActors(movieTitle, fname, lname) VALUES
 	('Black Panther', 'Chadwick', 'Boseman'),
