@@ -10,10 +10,11 @@ $count=$result->rowCount();
 
 if($count==1){
     session_start();
-    echo "Logged in as Administrator " . $_SESSION['username'] . ".";
+    echo "Logged in as Administrator " . $username . ".";
     $_SESSION['loggedin'] = true;
     $_SESSION['admin'] = true;
     $_SESSION['username'] = $username;
+	header("Location:adminpage.php");
 } else {
   echo "Fail";
 }
