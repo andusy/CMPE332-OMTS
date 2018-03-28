@@ -58,7 +58,12 @@
 					<li><a href="#">Theatres Complexes <i class="fa fa-angle-down" aria-hidden="true"></i></a></li>
 				    <li><a href="movies.html">Movies</a></li>
 				    <li><a href="php/memberpage.php">My Profile</a></li>
-					<li></li>
+					  <li><a>
+            <?php
+              session_start();
+              echo $_SESSION['username'];
+            ?>
+          </a></li>
 				</ul>
 			</div>
 			<!-- /.navbar-collapse -->

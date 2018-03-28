@@ -10,10 +10,14 @@ $count=$result->rowCount();
 
 if($count==1){
     session_start();
-    echo "Logged in as " . $_SESSION['username'] . ".";
     $_SESSION['loggedin'] = true;
     $_SESSION['admin'] = false;
     $_SESSION['username'] = $username;
+    echo "
+<h1>
+
+</h1>
+";
 } else {
   echo "Fail";
 }
