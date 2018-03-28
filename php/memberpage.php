@@ -79,7 +79,6 @@ function getDatetimeNow() {
 }
 
 $currentDate = getDatetimeNow();
-session_start();
 if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true && $_SESSION['admin'] == false) {
     echo $_SESSION['username'];
 } else {
@@ -140,7 +139,7 @@ if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true && $_SESSION['
 	?>
 </table>
 <hr>
-<button type="submit" class="btn btn-info" href="editprofile.php">Edit Profile</button>
+<a href="../editprofile.html"><button type="submit" class="btn btn-info">Edit Profile</button></a>
 </div>
 </body>
 </html>
