@@ -42,7 +42,71 @@ if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true && $_SESSION['
   <li role="presentation"><a href="#">Movies</a></li>
   <li role="presentation"><a href="#">Popular Movie</a></li>
   <li role="presentation"><a href="#">Popular Theatre Complex</a></li>
-</ul>	
-	
+</ul>
+	<h1>Members</h1>
+	<table>
+		<tr><th>First Name</th><th>Last Name</th><th>Address</th><th>City</th><th>Postal Code</th><th>Email Address</th><th>Phone Number</th><th>Username</th><th>Password</th><th>Account Number</th></tr>
+
+		<?php
+			include 'dbconnect.php';
+
+			$rows = $dbh->query("SELECT fname, lname, address, city, postalCode, emailAddress, phoneNumber, username, password, accountNumber
+			FROM customer");
+			foreach($rows as $row) {
+			echo "<tr><td>".$row[0]."</td><td>".$row[1]."</td><td>".$row[2]."</td><td>".$row[3]."</td><td>".$row[4]."</td><td>".$row[5]."</td><td>".$row[6]."</td><td>".$row[7]."</td><td>".$row[8]."</td><td>".$row[9]."</td>
+				<td>
+		        <button type='submit' class='btn btn-primary'><a href='viewRentalHistory.php?accountNumber=".$row[9]."''>Rental History</a></button>
+		      	</td>
+				<td>
+		        <button type='submit' class='btn btn-primary'><a href='deleteMember.php?accountNumber=".$row[9]."''>Delete</a></button>
+		      	</td>
+				</tr>";
+	    	}
+	    	$dbh = null;
+		?>
+	</table>
+
+	<h1>Theatre Complexes</h1>
+		<table>
+			<tr><th>Address</th><th>City</th><th>Postal Code</th><th>Phone Number</th><th>Theatre Complex ID</th></tr>
+
+			<?php
+				include 'dbconnect.php';
+
+				$rows = $dbh->query("SELECT address, city, postalCode, phone, theatreCompID
+				FROM theatrecomplex");
+				foreach($rows as $row) {
+				echo "<tr><td>".$row[0]."</td><td>".$row[1]."</td><td>".$row[2]."</td><td>".$row[3]."</td><td>".$row[4]."</td></tr>";
+		    	}
+		    	$dbh = null;
+			?>
+		</table>
+
+	<h1>Movies</h1>
+		<table>
+			<tr><th>Movie Title</th><th>Run Time (Minutes)</th><th>Plot Synopsis</th><th>Director</th><th>Production Company</th><th>Supplier Name</th><th>Start Date</th><th>End Date</th><th>Rating</th></tr>
+
+			<?php
+				include 'dbconnect.php';
+
+				$rows = $dbh->query("SELECT title, runTime, plotSynopsis, director, productionCompany, supplierName, startDate, endDate, rating
+				FROM Movie");
+				foreach($rows as $row) {
+				echo "<tr><td>".$row[0]."</td><td>".$row[1]."</td><td>".$row[2]."</td><td>".$row[3]."</td><td>".$row[4]."</td><td>".$row[5]."</td><td>".$row[6]."</td><td>".$row[7]."</td>";
+
+				if ($row[8] == null){
+					echo "<td>0</td>";
+				} else {
+					echo "<td>".$row[0]."</td>";
+				}
+
+				echo "</tr>";
+		    	}
+		    	$dbh = null;
+			?>
+		</table>
+
+	<h1>Popular Movie</h1>
+	<h1>Popular Theatre Complex</h1>
 </body>
 </html>
