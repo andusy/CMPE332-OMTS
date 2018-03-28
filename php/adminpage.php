@@ -69,12 +69,25 @@ if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true && $_SESSION['
 				$rows = $dbh->query("SELECT address, city, postalCode, phone, theatreCompID
 				FROM theatrecomplex");
 				foreach($rows as $row) {
-				echo "<tr><td>".$row[0]."</td><td>".$row[1]."</td><td>".$row[2]."</td><td>".$row[3]."</td><td>".$row[4]."</td></tr>";
+				echo "<tr><td>".$row[0]."</td><td>".$row[1]."</td><td>".$row[2]."</td><td>".$row[3]."</td><td>".$row[4]."</td>
+				<td>
+					<a href='editcomplex.php?theatreCompID=".$row[4]."''><button type='submit' class='btn btn-primary'>Edit</button></a>
+				</td>
+
+				</tr>";
 		    	}
 		    	$dbh = null;
 			?>
 		</table>
-
+		<h1>Add Theatre Complex</h1>
+		<form action="addtheatre.php" method="POST">
+				<input type="text" name="address" placeholder="Address" required/>
+				<input type="text" name="city" placeholder="City" required/>
+				<input type="text" name="postalCode" placeholder="Postal Code" required/>
+				<input type="text" name="phone" placeholder="Phone" required/>
+				<button type="submit" class="btn btn-primary">Add Complex</button>
+			<hr>
+		</form>
 	<h1>Movies</h1>
 		<table>
 			<tr><th>Movie Title</th><th>Run Time (Minutes)</th><th>Plot Synopsis</th><th>Director</th><th>Production Company</th><th>Supplier Name</th><th>Start Date</th><th>End Date</th><th>Rating</th></tr>
@@ -92,8 +105,11 @@ if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true && $_SESSION['
 				} else {
 					echo "<td>".$row[8]."</td>";
 				}
-
-				echo "</tr>";
+				echo "
+				<td>
+					<a href='editmovie.php?title=".$row[0]."''><button type='submit' class='btn btn-primary'>Edit</button></a>
+				</td>
+				</tr>";
 		    	}
 		    	$dbh = null;
 			?>
