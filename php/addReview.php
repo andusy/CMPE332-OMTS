@@ -51,17 +51,15 @@
 					</div>
 				</ul>
 				<ul class="nav navbar-nav navbar-right">
-					<li><a href="#">Theatres Complexes <i class="fa fa-angle-down" aria-hidden="true"></i></a></li>
+					<li><a href="../index.html">Log Out</a></li>
 					  <li><a href="movie.php">Movies</a></li>
-					  <li><a href="adminpage.php">Admin</a></li>
-						<li><a>
-							<?php
-								session_start();
-								if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true && $_SESSION['admin'] == false) {
-									echo $_SESSION['username'];
-								}
-							?>
-							</a></li>
+						<li><a href="memberpage.php">My Profile</a></li>
+					  <li><a>
+            <?php
+              session_start();
+              echo $_SESSION['username'];
+            ?>
+          </a></li>
 				</ul>
 			</div>
 			<!-- /.navbar-collapse -->
